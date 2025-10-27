@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesom -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <title>InfoPlus24.</title>
+  </head>
+  <body class="bg-gray-" onload="FetchData(10)">
+    <header class="flex flex-col">
+      <!-- advertisment section -->
+      <section class="advertisment py-3 bg-orange-400 text-">
+        <marquee behavior="" direction="">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
+          autem similique in est eveniet debitis nisi consectetur laboriosam
+          libero quos tempora dolores quod! Dolorem, exercitationem nostrum
+          suscipit dicta dolorum repellat?
+        </marquee>
+      </section>
+
+      <!-- navbar section -->
+
+      <div class="w-full md:w-[1300px] mx-auto my-2 bg-white">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center w-full px-3 py-5"
+        >
+          <div class="logo font-bold text-orange-500 text-2xl">InfoPlus24.</div>
+          <div
+            class="py-1 px-2 w-56 md:w-96 rounded bg-gray-100 focus:outline-1 focus:outline-orange-500"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text"
+              placeholder="discover News and more"
+              class="w-80 mx-auto py-1 px-2 focus:outline-none text-orange-500 placeholder:text-gray-600"
+            />
+          </div>
+          <div class="flex gap-2 text-2xl">
+            <i class="fa-regular fa-user cursor-pointer"></i>
+            <i class="fa-solid fa-globe cursor-pointer"></i>
+            <i class="fa-regular fa-moon cursor-pointer"></i>
+            <!-- <i class="hidden fa-solid fa-sun"></i> -->
+          </div>
+        </div>
+        <ul
+          class="flex flex-col md:flex-row justify-center gap-7 w-full my-5 font-semibold"
+        >
+          <li class="cursor-pointer">Home</li>
+          <li class="cursor-pointer">Sport</li>
+          <li class="cursor-pointer">Technology</li>
+          <li class="cursor-pointer">Blog</li>
+          <li class="cursor-pointer">About</li>
+          <li class="cursor-pointer">Contact</li>
+        </ul>
+      </div>
+    </header>
+    <!-- hero section -->
+    <section class="hero bg-gray-100 my-3 py-10">
+      <div class="w-full md:w-[1300px] mx-auto">
+        <div class="flex flex-col md:flex-row justify-between gap-10">
+          <!-- left div -->
+          <div class="flex flex-col justify-between gap-2 w-full md:w-2/3">
+            <h1 class="text-2xl font-bold md:w-[90%]">
+              Afghanistan–Pakistan Talks Resume in Istanbul on Ceasefire,
+              Sovereignty
+            </h1>
+            <div class="flex flex-col md:flex-row justify-between gap-4 p-4">
+              <div>
+                <p class="text-gray-600">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Dolorum laudantium officia omnis voluptatibus. Dolorem
+                  distinctio reiciendis, a quam fuga deleniti nulla quibusdam
+                  cum harum perferendis minus vero velit soluta aperiam. Lorem
+                  ipsum dolor sit amet, consectetur adipisicing elit. Dolorum
+                  laudantium officia omnis voluptatibus. Dolorem distinctio
+                  reiciendis, a quam fuga deleniti nulla quibusdam cum harum
+                  perferendis minus vero velit soluta aperiam.
+                </p>
+                <p class="date text-gray-500 my-2"></p>
+                <h4 class="text-xl">Related news</h4>
+                <a href="" class="hover:text-red-600 font-semibold">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit >
+                </a>
+                <a href="" class="hover:text-red-600 font-semibold">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit >
+                </a>
+              </div>
+              <img
+                src="assets/images/news.jpg"
+                alt=""
+                class="md:w-1/2 md:h-100"
+              />
+            </div>
+          </div>
+          <!-- right div -->
+          <div class="w-full md:w-1/3">
+            <div class="bg-white px-2 mx-5">
+              <h2 class="text-xl font-semibold text-red-600 pb-1 uppercase">
+                firsh news
+              </h2>
+              <div class="border-t-3 border-t-red-600 py-3">
+                <div
+                  class="flex justify-between items-start gap-5 py-2 hover:bg-red-300 border-b-3 border-b-gray-300 hover:bg-red-500 hover:text-white"
+                >
+                  <span class="text-2xl text-gray-500">1</span>
+                  <h5>
+                    excepturi unde alias? Natus hic aliquam tempora distinctio
+                    fugit
+                  </h5>
+                </div>
+                <!-- 2 -->
+                <div
+                  class="flex justify-between items-start gap-5 py-2 hover:bg-red-300 border-b-3 border-b-gray-300 hover:bg-red-500 hover:text-white"
+                >
+                  <span class="text-2xl text-gray-500">2</span>
+                  <h5>
+                    excepturi unde alias? Natus hic aliquam tempora distinctio
+                    fugit
+                  </h5>
+                </div>
+                <div
+                  class="flex justify-between items-start gap-5 py-2 hover:bg-red-300 border-b-3 border-b-gray-300 hover:bg-red-500 hover:text-white"
+                >
+                  <span class="text-2xl text-gray-500">3</span>
+                  <h5>
+                    excepturi unde alias? Natus hic aliquam tempora distinctio
+                    fugit
+                  </h5>
+                </div>
+                <div
+                  class="flex justify-between items-start gap-5 py-2 hover:bg-red-300 border-b-3 border-b-gray-300 hover:bg-red-500 hover:text-white"
+                >
+                  <span class="text-2xl text-gray-500">4</span>
+                  <h5>
+                    excepturi unde alias? Natus hic aliquam tempora distinctio
+                    fugit
+                  </h5>
+                </div>
+                <div
+                  class="flex justify-between items-start gap-5 py-2 hover:bg-red-500 hover:text-white border-b-3 border-b-gray-300"
+                >
+                  <span class="text-2xl text-gray-500">5</span>
+                  <h5>
+                    excepturi unde alias? Natus hic aliquam tempora distinctio
+                    fugit
+                  </h5>
+                </div>
+                <div
+                  class="flex justify-between items-start gap-5 py-2 hover:bg-red-500 hover:text-white"
+                >
+                  <span class="text-2xl text-gray-500">6</span>
+                  <h5>
+                    excepturi unde alias? Natus hic aliquam tempora distinctio
+                    fugit
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- latest news cards -->
+    <section class="w-full md:w-[1300px] mx-auto my-3">
+      <div class="flex justify-between items-center my-2 pb-2 border-b-3">
+        <h2 class="font-bold uppercase text-2xl">Latest news</h2>
+        <h2 class="text-gray-500 font-semibold hover:text-red-600">
+          <a href="">View all News</a>
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-5 mt-7" id="card"></div>
+    </section>
+    <!-- whatch video -->
+    <section class="bg-black/70 my-5">
+      <div class="w-full md:w-[1300px] mx-auto py-5 text-white">
+        <!-- title div -->
+        <div
+          class="flex justify-between items-center border-b-3 border-b-gray-300 pb-4"
+        >
+          <h2 class="text-2xl font-bold">WATCH ON YOUTUBE</h2>
+          <h2 class="text-gray-400 font-semibold">View all Video</h2>
+        </div>
+        <!-- content -->
+        <div class="flex justify-between gap-5">
+          <!-- video -->
+          <div class="flex flex-col py-5">
+            <iframe
+              width="700"
+              height="300"
+              src="https://www.youtube.com/embed/yqQCyWjgyZU?si=o8437ARl_X1hXNGa&amp;start=201"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <h2 class="my-6">FRISH NEWS ON FRITAG 1:00 UHR</h2>
+          </div>
+          <!-- list all video -->
+          <div class="flex flex-col">
+            <div class="flex justify-between gap-10">
+              <div class="md:w-[70%] flex justify-between" id="">
+                <div id="video_contanier"></div>
+
+                <!-- <div class="w-[50%] mx-3 my-4" id="video_title"></div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLLOW US ON SICLA MEDIA -->
+    <section class="bg-black/90 text-gray-200 font-semibold py-5">
+      <div class="md:w-[1300px] mx-auto flex flex-col">
+        <div class="border-b-3 border-b-gray-300">
+          <h2 class="uppercase font-bold text-2xl mb-2">
+            Follow us on social networks
+          </h2>
+        </div>
+        <div
+          class="flex justify-start items-center gap-10 py-3 text-gray-400 cursor-pointer"
+        >
+          <h2 class="text-2xl font-bold px-3 my-3 text-gray-400">
+            <i
+              class="fa-brands fa-facebook mr-4 text-4xl hover:text-blue-600"
+            ></i>
+            Facebook
+          </h2>
+          <h2 class="text-2xl font-bold px-3 text-gray-400">
+            <i class="fa-brands fa-youtube mr-4 text-4xl hover:text-red-600"></i
+            >YouTube
+          </h2>
+          <h2 class="text-2xl font-bold px-3 text-gray-400">
+            <i
+              class="fa-brands fa-linkedin mr-4 text-4xl hover:text-blue-400"
+            ></i
+            >LinkedIn
+          </h2>
+          <h2 class="text-2xl font-bold px-3 text-gray-400">
+            <i
+              class="fa-brands fa-telegram mr-4 text-4xl hover:text-blue-400"
+            ></i>
+            Telgram
+          </h2>
+          <h2 class="text-2xl font-bold px-3 text-gray-400">
+            <i
+              class="fa-brands fa-github mr-4 text-4xl hover:text-gray-300"
+            ></i>
+            Git Hub
+          </h2>
+        </div>
+      </div>
+    </section>
+    <!--  -->
+    <!-- footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-10">
+      <div
+        class="w-full md:w-[1300px] mx-auto px-5 grid grid-cols-1 md:grid-cols-4 gap-8"
+      >
+        <!-- About -->
+        <div>
+          <h3 class="text-2xl font-bold text-orange-500 mb-4">InfoPlus24.</h3>
+          <p class="text-gray-400">
+            Bringing you the latest and most trusted news from around the world
+            — from politics and business to sports and technology. Stay
+            informed, stay connected.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="hover:text-orange-400 transition">Home</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-orange-400 transition"
+                >Technology</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-orange-400 transition">Sports</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-orange-400 transition">Blog</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-orange-400 transition">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">Newsletter</h3>
+          <p class="text-gray-400 mb-3">
+            Subscribe to get the latest news updates directly in your inbox.
+          </p>
+          <form class="flex flex-col sm:flex-row items-center gap-2">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="w-full sm:w-auto flex-grow px-3 py-2 rounded bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              required
+            />
+            <button
+              type="submit"
+              class="bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded text-white font-semibold transition"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+
+        <!-- Follow Us -->
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">Follow Us</h3>
+          <div class="flex gap-4 text-2xl">
+            <a href="#" class="hover:text-blue-500"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="#" class="hover:text-red-600"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a href="#" class="hover:text-blue-400"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="#" class="hover:text-sky-400"
+              ><i class="fa-brands fa-telegram"></i
+            ></a>
+            <a href="#" class="hover:text-gray-100"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-gray-700 mt-10 py-5">
+        <div
+          class="w-full md:w-[1300px] mx-auto flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm px-5"
+        >
+          <p>&copy; <span id="year"></span> InfoPlus24. All Rights Reserved.</p>
+          <p>
+            Designed with ❤️ by
+            <span class="text-orange-500 font-semibold">Mohammad Qasimi</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Update year automatically -->
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <!-- fetch news form api -->
+    <script src="assets/js/fetchNews.js"></script>
+
+    <!-- scripts -->
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>
