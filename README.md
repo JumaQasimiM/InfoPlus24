@@ -102,7 +102,7 @@ cardContainer.innerHTML += card;
 
 Mohammad Qasimi
 💼 Front-End Developer | 🌍 Based on HTML, Tailwind, and JS
-📧 Contact: youremail@example.com
+📧 Contact: juma82db@gmail.com
 
 📜 License
 

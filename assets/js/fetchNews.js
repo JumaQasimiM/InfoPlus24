@@ -1,26 +1,24 @@
 // fetch data api
 
 async function FetchData(postCount) {
-  const data = await fetch(
-    "https://jsonplaceholder.typicode.com/posts?_limit=" + postCount
-  );
-  if (!data.ok) {
-    throw Error("Can not fetch the data.");
-    return;
-  }
-
+  const url = "https://jsonplaceholder.typicode.com/posts?_limit=";
   //   get time
   const now = new Date();
   const h = now.getHours();
   const m = now.getMinutes();
 
-  //   chnage in to json format
-  const res = await data.json();
+  try {
+    const response = await fetch(url + postCount);
+    if (!response.ok) {
+      throw new Error("Response Status:", response.status);
+    }
 
-  let posts = "";
+    //   chnage in to json format
+    const resualt = await response.json();
 
-  res.forEach((element) => {
-    posts += `
+    let posts = "";
+    resualt.forEach((element) => {
+      posts += `
     <div class='flex flex-col border-b-3 border-b-gray-300 hover:border-b-gray-600 group'>
         <img
             src="assets/images/news.jpg"
@@ -43,6 +41,9 @@ async function FetchData(postCount) {
         </div>
     </div>
     `;
-  });
-  return (document.getElementById("card").innerHTML = posts);
+    });
+    return (document.getElementById("card").innerHTML = posts);
+  } catch (error) {
+    console.log("Error :", error);
+  }
 }
