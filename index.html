@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="assets/css/index.css" />
     <title>InfoPlus24.</title>
   </head>
-  <body class="bg-gray-" onload="FetchData(10)">
+  <body class="bg-gray-" onload="FetchData(7)">
     <header class="flex flex-col">
       <!-- navbar section -->
 
@@ -315,13 +315,20 @@
           <p class="text-gray-400 mb-3">
             Subscribe to get the latest news updates directly in your inbox.
           </p>
-          <form class="flex flex-col sm:flex-row items-center gap-2">
+          <div id="err" class=""></div>
+          <form
+            method="post"
+            class="flex flex-col sm:flex-row items-center gap-2"
+            id="submit_newslatter"
+          >
             <input
               type="email"
+              id="email"
+              name="email"
               placeholder="Enter your email"
               class="w-full sm:w-auto flex-grow px-3 py-2 rounded bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
-              required
             />
+
             <button
               type="submit"
               class="bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded text-white font-semibold transition"
@@ -376,7 +383,8 @@
     <script src="assets/js/fetchNews.js"></script>
     <!-- search function -->
     <script src="assets/js/search.js"></script>
-
+    <!-- handle newslatter -->
+    <script src="assets/js/newslater.js"></script>
     <!-- scripts -->
     <script src="assets/js/index.js"></script>
   </body>

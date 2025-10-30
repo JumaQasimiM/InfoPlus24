@@ -1,3 +1,10 @@
+// show and check the location
+
+function getLocation() {
+  const location = navigator.geolocation.getCurrentPosition();
+  console.log(location);
+}
+getLocation();
 // show date
 
 // get all elements with class date
