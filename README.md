@@ -1,4 +1,6 @@
-# 📰 InfoPlus24
+# InfoPlus24
+
+live demo https://jumaqasimim.github.io/InfoPlus24/
 
 **InfoPlus24** is a modern, responsive news website built with **HTML**, **Tailwind CSS**, and **JavaScript**.  
 It features the latest news, live updates, embedded videos, and social media integration — all styled with Tailwind for a clean, dynamic look.
@@ -54,7 +56,7 @@ InfoPlus24/
 ### 1️⃣ Clone this repository
 
 ```bash
-git clone https://github.com/yourusername/InfoPlus24.git
+git clone https://github.com/JumaQasimiM/InfoPlus24.git
 ```
 
 2️⃣ Open the project folder
