@@ -55,7 +55,15 @@ async function load_news_detail() {
       <p>${post.body}</p>
 
      ${post.tags.map((t) => `<p class='text-red-600'>${t}</p>`).join("")}
-      
+       <div class='flex justify-around'>
+          <div>${post.reactions.likes} <i class="fa-solid fa-thumbs-up"></i>
+          </div>
+            <div>
+               ${
+                 post.reactions.dislikes
+               }<i class="fa-solid fa-thumbs-down"></i> 
+            </div>
+        </div>
 
 
 

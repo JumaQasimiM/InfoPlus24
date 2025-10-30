@@ -41,7 +41,7 @@ async function FetchData(postCount) {
         <img
               src='https://picsum.photos/seed/${post.id}/400/300'
               alt=""
-              class="group-hover:border-orange-600 group-hover:border-b-3 transition duration-200"
+              class="transition duration-200"
           />
         </a>
        
@@ -52,21 +52,19 @@ async function FetchData(postCount) {
                <a href='news.html?slug=${slug}'> ${post.title}</a>
             </h2>
             <p class="my-2">
-                ${post.body}
+                ${post.body.slice(0, 100)} 
+                <a href='news.html?slug=${slug}' class='text-red-600 underline font-semibold'>read more</a>
             </p>
-            <div class='tags'>${post.tags.join(", ")} </div>
-
-
-            <div class='flex justify-around'><div>${
-              post.reactions.likes
-            } <i class="fa-solid fa-thumbs-up"></i>
+            <div class='tags flex gap-2'>
+           
+            ${post.tags
+              .map(
+                (t) =>
+                  `<span class='text-white rounded-md px-1 cursor-pointer bg-orange-500'>${t} </span> `
+              )
+              .join("")}
+      
             </div>
-            <div>
-            ${post.reactions.dislikes}<i class="fa-solid fa-thumbs-down"></i> 
-            </div>
-            </div>
-
-
 
             <p class="time font-semibold text-gray-500 mb-4">
             ${"Today - " + h + ":" + m}
