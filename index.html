@@ -17,251 +17,281 @@
     <link rel="stylesheet" href="assets/css/index.css" />
     <title>InfoPlus24.</title>
   </head>
-  <body class="bg-gray-" onload="FetchData(7)">
-    <header class="flex flex-col">
-      <!-- navbar section -->
-
-      <div class="w-full md:w-[1300px] mx-auto my-2 bg-white">
-        <div
-          class="flex flex-col md:flex-row justify-between items-center w-full px-3 py-5"
+  <body class="bg-gray-" onload="FetchData(20)">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center p-4"
+      >
+        <a href="index.html" class="text-3xl font-bold text-orange-500"
+          >InfoPlus24<span class="text-gray-900">.</span></a
         >
-          <div class="logo font-bold text-orange-500 text-2xl">InfoPlus24.</div>
-          <div
-            class="py-1 px-2 w-56 md:w-96 rounded bg-gray-100 focus:outline-1 focus:outline-orange-500"
-          >
-            <form id="search_form">
-              <button type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-              <input
-                id="search_input"
-                type="text"
-                name="search"
-                placeholder="discover News and more"
-                class="w-80 mx-auto py-1 px-2 focus:outline-none text-orange-500 placeholder:text-gray-600"
-              />
-            </form>
-          </div>
-          <div class="flex gap-2 text-2xl">
-            <i class="fa-regular fa-user cursor-pointer"></i>
-            <i class="fa-solid fa-globe cursor-pointer"></i>
-            <!-- <i class="fa-regular fa-moon cursor-pointer"></i> -->
-            <!-- <i class="hidden fa-solid fa-sun"></i> -->
-          </div>
+
+        <!-- Search -->
+        <form
+          class="flex items-center bg-gray-100 rounded-full px-4 py-2 mt-3 md:mt-0 focus-within:ring-2 focus-within:ring-orange-500"
+        >
+          <i class="fa-solid fa-magnifying-glass text-gray-500"></i>
+          <input
+            type="text"
+            placeholder="Search news..."
+            class="bg-transparent outline-none px-2 text-gray-700 w-56 md:w-80"
+          />
+        </form>
+
+        <!-- Icons -->
+        <div class="flex gap-4 text-2xl text-gray-600 mt-3 md:mt-0">
+          <i
+            class="fa-regular fa-user hover:text-orange-500 cursor-pointer"
+          ></i>
+          <i class="fa-solid fa-globe hover:text-orange-500 cursor-pointer"></i>
         </div>
+      </div>
+
+      <!-- Menu -->
+      <nav class="border-t">
         <ul
-          class="flex flex-col md:flex-row justify-center gap-7 w-full my-5 font-semibold"
+          class="flex justify-center gap-8 py-3 text-gray-700 font-semibold text-lg"
         >
-          <li class="cursor-pointer"><a href="index.html">Home</a></li>
-          <li class="cursor-pointer">Sport</li>
-          <li class="cursor-pointer">Technology</li>
-          <li class="cursor-pointer">Blog</li>
-          <li class="cursor-pointer">About</li>
-          <li class="cursor-pointer">Contact</li>
+          <li>
+            <a href="index.html" class="hover:text-orange-500 transition"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-orange-500 transition">Technology</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-orange-500 transition">Sports</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-orange-500 transition">Blog</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-orange-500 transition">Contact</a>
+          </li>
         </ul>
-      </div>
+      </nav>
     </header>
-    <!-- show loading and resulat -->
 
-    <div id="show_resault"></div>
-    <!-- hero section -->
-    <section class="hero bg-gray-100 my-3 py-10">
-      <div class="w-full md:w-[1300px] mx-auto">
-        <div class="flex flex-col md:flex-row justify-between gap-10">
-          <!-- left div -->
-          <div class="flex flex-col justify-between gap-2 w-full md:w-2/3">
-            <h1 class="text-2xl font-bold md:w-[90%]">
-              20 May NEW TECHNOLOGY: WHAT YOU NEED TO KNOW
-            </h1>
-            <div class="flex flex-col md:flex-row justify-between gap-4 p-4">
-              <div>
-                <p class="text-gray-600">
-                  We are living in a time where foldable smartphones and tablets
-                  are a reality, where people regularly speak to their devices,
-                  where someone can appear by hologram for an interview, and
-                  where automated decision making by machines is so complex that
-                  even their creators struggle to understand the processes.
-                  Publishers have to strike a balance between not being left
-                  behind by technology, and not being continually distracted by
-                  the latest “bright, shiny things,” as stressed in a recent
-                  report from the Reuters Institute. Here we take a look at the
-                  tech developments that news publishers should be watching and
-                  experimenting with.
-                </p>
-                <a
-                  href="https://innovation.media/insights/new-technology-what-you-need-to-know"
-                  class="text-orange-500 underline"
-                  >learn more</a
-                >
-                <p class="date text-gray-500 my-2"></p>
-                <h4 class="text-xl">Related news</h4>
-                <a href="" class="hover:text-red-600 font-semibold">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit >
-                </a>
-                <a href="" class="hover:text-red-600 font-semibold">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit >
-                </a>
-              </div>
-              <img
-                src="assets/images/it-news.png"
-                alt=""
-                class="md:w-1/2 md:h-100"
-              />
-            </div>
-          </div>
-          <!-- right div -->
-          <div class="w-full md:w-1/3">
-            <div class="bg-white px-2 mx-5">
-              <h2 class="text-xl font-semibold text-red-600 pb-1 uppercase">
-                firsh news
-              </h2>
-              <div class="border-t-3 border-t-red-600 py-3">
-                <div
-                  class="flex justify-between items-start gap-5 py-2 hover:bg-red-300 border-b-3 border-b-gray-300 hover:bg-red-500 hover:text-white"
-                >
-                  <span class="text-2xl text-gray-500">1</span>
-                  <h5>
-                    excepturi unde alias? Natus hic aliquam tempora distinctio
-                    fugit
-                  </h5>
-                </div>
-                <!-- 2 -->
-                <div
-                  class="flex justify-between items-start gap-5 py-2 hover:bg-red-300 border-b-3 border-b-gray-300 hover:bg-red-500 hover:text-white"
-                >
-                  <span class="text-2xl text-gray-500">2</span>
-                  <h5>
-                    excepturi unde alias? Natus hic aliquam tempora distinctio
-                    fugit
-                  </h5>
-                </div>
-                <div
-                  class="flex justify-between items-start gap-5 py-2 hover:bg-red-300 border-b-3 border-b-gray-300 hover:bg-red-500 hover:text-white"
-                >
-                  <span class="text-2xl text-gray-500">3</span>
-                  <h5>
-                    excepturi unde alias? Natus hic aliquam tempora distinctio
-                    fugit
-                  </h5>
-                </div>
-                <div
-                  class="flex justify-between items-start gap-5 py-2 hover:bg-red-300 border-b-3 border-b-gray-300 hover:bg-red-500 hover:text-white"
-                >
-                  <span class="text-2xl text-gray-500">4</span>
-                  <h5>
-                    excepturi unde alias? Natus hic aliquam tempora distinctio
-                    fugit
-                  </h5>
-                </div>
-                <div
-                  class="flex justify-between items-start gap-5 py-2 hover:bg-red-500 hover:text-white border-b-3 border-b-gray-300"
-                >
-                  <span class="text-2xl text-gray-500">5</span>
-                  <h5>
-                    excepturi unde alias? Natus hic aliquam tempora distinctio
-                    fugit
-                  </h5>
-                </div>
-                <div
-                  class="flex justify-between items-start gap-5 py-2 hover:bg-red-500 hover:text-white"
-                >
-                  <span class="text-2xl text-gray-500">6</span>
-                  <h5>
-                    excepturi unde alias? Natus hic aliquam tempora distinctio
-                    fugit
-                  </h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <!-- Hero Section -->
+    <section
+      class="max-w-6xl mx-auto mt-6 grid md:grid-cols-3 gap-10 p-4 bg-white rounded-lg shadow-sm"
+    >
+      <div class="md:col-span-2">
+        <h1 class="text-3xl font-bold mb-3">
+          20 May — NEW TECHNOLOGY: WHAT YOU NEED TO KNOW
+        </h1>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          We are living in a time where foldable smartphones and tablets are a
+          reality...
+        </p>
+        <a href="#" class="text-orange-600 underline">Learn more</a>
       </div>
+      <img
+        src="assets/images/it-news.png"
+        class="w-full h-100 rounded-lg shadow-md"
+        alt="Tech News"
+      />
     </section>
-    <!-- FLLOW US ON SICLA MEDIA -->
-    <section class="bg-gray-900 pt-10">
-      <div class="md:w-[1300px] mx-auto flex flex-col">
-        <div class="border-b-3 border-b-gray-300">
-          <h2 class="uppercase font-bold text-2xl mb-2 text-orange-500">
-            Follow us on social networks
-          </h2>
-        </div>
+    <!-- FOLLOW US SECTION -->
+    <section class="bg-gray-900 py-12">
+      <div class="max-w-6xl mx-auto px-5">
+        <!-- Title -->
         <div
-          class="flex flex-col md:flex-row justify-start items-center gap-10 py-3 cursor-pointer"
+          class="border-b border-gray-700 pb-3 mb-6 text-center md:text-left"
         >
-          <h2 class="text-2xl font-bold px-3 my-3 text-gray-200">
-            <i
-              class="fa-brands fa-facebook mr-4 text-4xl hover:text-blue-600"
-            ></i>
+          <h2
+            class="text-3xl font-bold text-orange-500 uppercase tracking-wide"
+          >
+            Follow us on social media
+          </h2>
+          <p class="text-gray-400 text-sm mt-2">
+            Stay connected with InfoPlus24 — join us on your favorite platforms.
+          </p>
+        </div>
+
+        <!-- Social Links -->
+        <div
+          class="flex flex-col md:flex-row justify-center md:justify-start items-center gap-6"
+        >
+          <!-- Facebook -->
+          <a
+            href="#"
+            class="flex items-center gap-3 text-gray-200 text-xl font-semibold hover:scale-105 transition-transform duration-200"
+          >
+            <span
+              class="p-4 rounded-full bg-blue-700/20 hover:bg-blue-700/30 transition"
+            >
+              <i class="fa-brands fa-facebook text-blue-500 text-3xl"></i>
+            </span>
             Facebook
-          </h2>
-          <h2 class="text-2xl font-bold px-3 text-gray-200">
-            <i class="fa-brands fa-youtube mr-4 text-4xl hover:text-red-600"></i
-            >YouTube
-          </h2>
-          <h2 class="text-2xl font-bold px-3 text-gray-200">
-            <i
-              class="fa-brands fa-linkedin mr-4 text-4xl hover:text-blue-400"
-            ></i
-            >LinkedIn
-          </h2>
-          <h2 class="text-2xl font-bold px-3 text-gray-200">
-            <i
-              class="fa-brands fa-telegram mr-4 text-4xl hover:text-blue-400"
-            ></i>
-            Telgram
-          </h2>
-          <h2 class="text-2xl font-bold px-3 text-gray-200">
-            <i
-              class="fa-brands fa-github mr-4 text-4xl hover:text-gray-300"
-            ></i>
-            Git Hub
-          </h2>
-        </div>
-      </div>
-    </section>
-    <!-- latest news cards -->
-    <section class="w-full md:w-[1300px] mx-auto my-3">
-      <div class="flex justify-between items-center my-2 pb-2 border-b-3">
-        <h2 class="font-bold uppercase text-2xl">Latest news</h2>
-        <h2 class="text-gray-500 font-semibold hover:text-red-600">
-          <a href="">View all News</a>
-        </h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-5 mt-7" id="card"></div>
-    </section>
-    <!-- whatch video -->
-    <section class="bg-black/70 my-5">
-      <div class="w-full md:w-[1300px] mx-auto py-5 text-white">
-        <!-- title div -->
-        <div
-          class="flex justify-between items-center border-b-3 border-b-gray-300 pb-4"
-        >
-          <h2 class="text-2xl font-bold">WATCH ON YOUTUBE</h2>
-          <h2 class="text-gray-400 font-semibold">View all Video</h2>
-        </div>
-        <!-- content -->
-        <div class="flex justify-between gap-5">
-          <!-- video -->
-          <div class="flex flex-col py-5">
-            <iframe
-              width="700"
-              height="300"
-              src="https://www.youtube.com/embed/yqQCyWjgyZU?si=o8437ARl_X1hXNGa&amp;start=201"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-            <h2 class="my-6">FRISH NEWS ON FRITAG 1:00 UHR</h2>
-          </div>
-          <!-- list all video -->
-          <div class="flex flex-col">
-            <div class="flex justify-between gap-10">
-              <div class="md:w-[70%] flex justify-between" id="">
-                <div id="video_contanier"></div>
+          </a>
 
-                <!-- <div class="w-[50%] mx-3 my-4" id="video_title"></div> -->
+          <!-- YouTube -->
+          <a
+            href="#"
+            class="flex items-center gap-3 text-gray-200 text-xl font-semibold hover:scale-105 transition-transform duration-200"
+          >
+            <span
+              class="p-4 rounded-full bg-red-700/20 hover:bg-red-700/30 transition"
+            >
+              <i class="fa-brands fa-youtube text-red-600 text-3xl"></i>
+            </span>
+            YouTube
+          </a>
+
+          <!-- LinkedIn -->
+          <a
+            href="#"
+            class="flex items-center gap-3 text-gray-200 text-xl font-semibold hover:scale-105 transition-transform duration-200"
+          >
+            <span
+              class="p-4 rounded-full bg-blue-600/20 hover:bg-blue-600/30 transition"
+            >
+              <i class="fa-brands fa-linkedin text-blue-400 text-3xl"></i>
+            </span>
+            LinkedIn
+          </a>
+
+          <!-- Telegram -->
+          <a
+            href="#"
+            class="flex items-center gap-3 text-gray-200 text-xl font-semibold hover:scale-105 transition-transform duration-200"
+          >
+            <span
+              class="p-4 rounded-full bg-sky-600/20 hover:bg-sky-600/30 transition"
+            >
+              <i class="fa-brands fa-telegram text-sky-400 text-3xl"></i>
+            </span>
+            Telegram
+          </a>
+
+          <!-- GitHub -->
+          <a
+            href="#"
+            class="flex items-center gap-3 text-gray-200 text-xl font-semibold hover:scale-105 transition-transform duration-200"
+          >
+            <span
+              class="p-4 rounded-full bg-gray-700/20 hover:bg-gray-700/40 transition"
+            >
+              <i class="fa-brands fa-github text-gray-300 text-3xl"></i>
+            </span>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!--  LATEST NEWS SECTION -->
+    <section class="w-full md:w-[1300px] mx-auto my-12 px-5">
+      <!-- Header -->
+      <div
+        class="flex flex-col md:flex-row justify-between items-center gap-4 pb-4 border-b border-gray-300"
+      >
+        <h2
+          class="font-extrabold uppercase text-3xl text-gray-900 tracking-wide"
+        >
+          Latest News
+        </h2>
+        <a
+          href="#"
+          class="text-orange-600 font-semibold hover:text-orange-700 transition-all flex items-center gap-2"
+        >
+          View all News
+          <i class="fa-solid fa-arrow-right text-sm"></i>
+        </a>
+      </div>
+
+      <!-- News Cards -->
+      <div
+        id="card"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10"
+      ></div>
+    </section>
+
+    <!--  WATCH VIDEO SECTION -->
+    <section class="bg-black/80 my-10">
+      <div class="w-full md:w-[1300px] mx-auto py-8 px-5 text-white">
+        <!-- Header -->
+        <div
+          class="flex flex-col md:flex-row justify-between items-center border-b-2 border-gray-700 pb-4 mb-6"
+        >
+          <h2 class="text-3xl font-bold uppercase tracking-wide">
+            Watch on YouTube
+          </h2>
+          <a
+            href="#"
+            class="text-orange-500 font-semibold hover:text-orange-600 mt-3 md:mt-0 transition"
+          >
+            View All Videos
+          </a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <!-- Featured Video -->
+          <div class="flex flex-col">
+            <div
+              class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <iframe
+                class="w-full h-64 md:h-96"
+                src="https://www.youtube.com/embed/yqQCyWjgyZU?si=o8437ARl_X1hXNGa&amp;start=201"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <h3
+              class="text-xl md:text-2xl font-semibold mt-4 hover:text-orange-500 transition"
+            >
+              Fresh News on Freitag 1:00 Uhr
+            </h3>
+          </div>
+
+          <!-- Video List -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <!-- Example Video Card -->
+            <div
+              class="flex flex-col bg-gray-900 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+            >
+              <img
+                src="https://img.youtube.com/vi/yqQCyWjgyZU/0.jpg"
+                alt="Video Thumbnail"
+                class="w-full h-36 object-cover"
+              />
+              <div class="p-3 flex flex-col justify-between h-full">
+                <h4
+                  class="font-semibold text-gray-100 line-clamp-2 hover:text-orange-500 transition"
+                >
+                  Fresh News Update: Breaking Stories
+                </h4>
+                <span class="text-gray-400 text-sm mt-2"
+                  ><i class="fa-solid fa-clock mr-1"></i> 10 min ago</span
+                >
+              </div>
+            </div>
+
+            <!-- Duplicate for more videos -->
+            <div
+              class="flex flex-col bg-gray-900 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+            >
+              <img
+                src="https://img.youtube.com/vi/yqQCyWjgyZU/1.jpg"
+                alt="Video Thumbnail"
+                class="w-full h-36 object-cover"
+              />
+              <div class="p-3 flex flex-col justify-between h-full">
+                <h4
+                  class="font-semibold text-gray-100 line-clamp-2 hover:text-orange-500 transition"
+                >
+                  Today’s Headlines: Important Updates
+                </h4>
+                <span class="text-gray-400 text-sm mt-2"
+                  ><i class="fa-solid fa-clock mr-1"></i> 1 hr ago</span
+                >
               </div>
             </div>
           </div>
@@ -269,7 +299,6 @@
       </div>
     </section>
 
-    <!--  -->
     <!-- footer -->
     <footer class="bg-gray-900 text-gray-300 pt-10">
       <div

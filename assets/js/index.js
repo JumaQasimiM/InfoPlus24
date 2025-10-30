@@ -1,13 +1,22 @@
-// show and check the location
-
+// 1. Show and check location
 function getLocation() {
-  const location = navigator.geolocation.getCurrentPosition();
-  console.log(location);
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        console.log("Latitude:", position.coords.latitude);
+        console.log("Longitude:", position.coords.longitude);
+      },
+      (error) => {
+        console.error("Error getting location:", error.message);
+      }
+    );
+  } else {
+    console.log("Geolocation is not supported by this browser.");
+  }
 }
 getLocation();
-// show date
 
-// get all elements with class date
+// 2. Show date and time
 const dates = document.querySelectorAll(".date");
 const times = document.querySelectorAll(".time");
 
@@ -29,50 +38,36 @@ const months = [
 
 const year = now.getFullYear();
 const month = months[now.getMonth()];
-const day = now.getDay();
-// times
-const h = now.getHours();
-const m = now.getMinutes();
+const day = now.getDate(); // day of the month
+const h = now.getHours().toString().padStart(2, "0");
+const m = now.getMinutes().toString().padStart(2, "0");
 
-const today = new Date().toLocaleDateString();
+dates.forEach((el) => (el.textContent = `${month}-${day}-${year}`));
+times.forEach((el) => (el.textContent = `Today - ${h}:${m}`));
 
-// insert date
-dates.forEach((el) => {
-  //   el.textContent = today;
-  el.textContent = month + "-" + day + "-" + year;
-});
-
-// insert times
-times.forEach((el) => {
-  el.textContent = "Today - " + h + ":" + m;
-});
-
-// show wedios
-
+// 3. Show videos
 const video_list_container = document.getElementById("video_contanier");
-const video_title = document.getElementById("video_title");
-const videos = ["yqQCyWjgyZU", "i4iO93NvwRo", "i4iO93NvwRo"];
+const video_title_container = document.getElementById("video_title"); // make sure it exists in HTML
 
-const video = [
-  { id: "yqQCyWjgyZU", title: "" },
-  { id: "i4iO93NvwRo", title: "" },
-];
-const titles = [
-  "Lorem ipsum dolor sit amet consectetur, adipisicing.Lorem ipsum dolor sit amet ",
-  "Lorem ipsum dolor sit amet consectetur, adipisicing.Lorem ipsum dolor sit amet consectetur, adipisicing.",
+const videos = [
+  { id: "yqQCyWjgyZU", title: "First Video Title" },
+  { id: "i4iO93NvwRo", title: "Second Video Title" },
+  { id: "i4iO93NvwRo", title: "Third Video Title" },
 ];
 
-videos.forEach((id) => {
+videos.forEach((video) => {
+  // create iframe
   const iframe = document.createElement("iframe");
-  iframe.src = `https://www.youtube.com/embed/${id}`;
-  iframe.className = "w-full my-4 h-30 border";
+  iframe.src = `https://www.youtube.com/embed/${video.id}`;
+  iframe.className = "w-full my-4 h-64 border"; // fixed height
   iframe.allowFullscreen = true;
   video_list_container.appendChild(iframe);
-});
 
-titles.forEach((title) => {
-  const p = document.createElement("p");
-  p.className = "text-gray-500 font-semibold";
-  video_title.appendChild(p);
-  p.textContent = title;
+  // create title
+  if (video_title_container) {
+    const p = document.createElement("p");
+    p.className = "text-gray-500 font-semibold mb-2";
+    p.textContent = video.title;
+    video_title_container.appendChild(p);
+  }
 });

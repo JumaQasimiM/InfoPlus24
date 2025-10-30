@@ -1,44 +1,42 @@
-// handle submit newslatter
-
-const newslatter = document.getElementById("submit_newslatter");
+const newsletterForm = document.getElementById("submit_newslatter");
 const err = document.getElementById("err");
 
-newslatter.addEventListener("submit", function (e) {
+newsletterForm.addEventListener("submit", function (e) {
   e.preventDefault();
-  const form = e.target;
-  const formData = new FormData(form);
-  const email = formData.get("email");
+
+  const formData = new FormData(e.target);
+  const email = formData.get("email").trim();
+
+  // Simple email validation regex
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   if (!email) {
     err.className = "block text-red-700";
-    err.textContent = "biite füllen Sie die form aus.";
+    err.textContent = "Bitte füllen Sie das Formular aus.";
+    return;
   }
-  //    else if (email.length <= 6) {
-  //     err.className = "block text-red-700";
-  //     err.textContent = "bitte Sreiben die die Rightier email.";
-  //   }
-  else {
-    const userDitail = {
-      username: "Qasimi",
-      email: email,
-    };
-    localStorage.setItem("email", email);
 
-    //stringify convert object into string , because localstorage acsept just string value
-    localStorage.setItem("user", JSON.stringify(userDitail));
-    err.className = "hidden";
-
-    // console.log("from localStorage", localStorage.getItem("email"));
-
-    // get value form localstorage
-    const getUser = localStorage.getItem("user");
-    if (getUser) {
-      // convert to an object
-      const userData = JSON.parse(getUser);
-
-      console.log(getUser);
-      alert("Vielen Dank für Ihre Abunieren❤️", getUser.email);
-    } else {
-      console.log("User data not founded!");
-    }
+  if (!emailRegex.test(email)) {
+    err.className = "block text-red-700";
+    err.textContent = "Bitte geben Sie eine gültige E-Mail-Adresse ein.";
+    return;
   }
+
+  // Hide error if everything is fine
+  err.className = "hidden";
+
+  // Save user info in localStorage
+  const userDetail = {
+    username: "Qasimi",
+    email: email,
+  };
+
+  localStorage.setItem("user", JSON.stringify(userDetail));
+  localStorage.setItem("email", email);
+
+  // Success message
+  alert(`Vielen Dank für Ihre Anmeldung ❤️\nE-Mail: ${email}`);
+
+  // Reset form
+  e.target.reset();
 });

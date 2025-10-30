@@ -1,80 +1,79 @@
-// fetch data api
+// Show logged-in user not compleete
 function showUser() {
   const user = localStorage.getItem("user");
+  if (!user) return;
   const userData = JSON.parse(user);
-  // console.log(userData.username);
   console.log("Welcome dear: " + userData.username);
-  // alert("Welcome dear: " + userData.username);
 }
 
-// fetch posts form api
-
+// Fetch posts from API and display
 async function FetchData(postCount) {
-  const url = "https://dummyjson.com/posts?limit=";
+  const url = `https://dummyjson.com/posts?limit=${postCount}`;
 
-  //   get time
+  // Get current time
   const now = new Date();
-  const h = now.getHours();
-  const m = now.getMinutes();
+  const h = now.getHours().toString().padStart(2, "0");
+  const m = now.getMinutes().toString().padStart(2, "0");
 
   try {
-    const response = await fetch(url + postCount);
+    const response = await fetch(url);
 
     if (!response.ok) {
-      throw new Error("Response Status:", response.status);
+      throw new Error("Response Status: " + response.status);
     }
 
-    //   chnage in to json format
-    const resualt = await response.json();
-    console.log(resualt);
-    // const slug =
-    let posts = "";
-    resualt.posts.forEach((post) => {
-      // create slug
-      const news_title = post.title;
-      const slug = news_title.toLowerCase().split(" ").join("-");
-      console.log(slug);
+    const result = await response.json();
 
-      posts += `
-    <div class='flex flex-col border-b-3 border-b-gray-300 hover:border-b-gray-600 group'>
-      <a href='news.html?slug=${slug}'>  
-        <img
-              src='https://picsum.photos/seed/${post.id}/400/300'
-              alt=""
-              class="transition duration-200"
+    // Build HTML for posts
+    let postsHTML = result.posts
+      .map((post) => {
+        const slug = post.title.toLowerCase().split(" ").join("-");
+        return `
+      <div class='flex flex-col border-b-2 border-gray-300 hover:border-gray-600 transition group'>
+        <a href='news.html?slug=${slug}' class='overflow-hidden rounded-lg'>
+          <img
+            src='https://picsum.photos/seed/${post.id}/400/300'
+            alt='${post.title}'
+            class='w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105'
           />
         </a>
-       
-        <div class="my-2">
-            <h2
-                class="text-xl font-bold group-hover:text-orange-600 transition duration-200"
-            >
-               <a href='news.html?slug=${slug}'> ${post.title}</a>
-            </h2>
-            <p class="my-2">
-                ${post.body.slice(0, 100)} 
-                <a href='news.html?slug=${slug}' class='text-red-600 underline font-semibold'>read more</a>
-            </p>
-            <div class='tags flex gap-2'>
-           
+        <div class="my-3 px-1">
+          <h2 class="text-xl font-bold group-hover:text-orange-500 transition duration-200">
+            <a href='news.html?slug=${slug}'>${post.title}</a>
+          </h2>
+          <p class="my-2 text-gray-600">
+            ${post.body.slice(0, 100)} 
+          </p>
+          <div class='tags flex gap-2 flex-wrap mt-2'>
             ${post.tags
               .map(
-                (t) =>
-                  `<span class='text-white rounded-md px-1 cursor-pointer bg-orange-500'>${t} </span> `
+                (tag) =>
+                  `<span class='text-white rounded-md px-2 py-1 cursor-pointer bg-orange-500 text-sm'>${tag}</span>`
               )
               .join("")}
-      
+          </div>
+           <div
+              class="flex justify-between items-center mt-4 text-sm text-gray-500"
+            >
+              <span><i class="fa-solid fa-clock mr-1"></i> Today - ${h}:${m}</span>
+              <a
+                href='news.html?slug=${slug}'
+                class="text-orange-500 font-semibold hover:underline hover:text-orange-700"
+                >Read More</a
+              >
+             
             </div>
 
-            <p class="time font-semibold text-gray-500 mb-4">
-            ${"Today - " + h + ":" + m}
-            </p>
         </div>
-    </div>
-    `;
-    });
-    return (document.getElementById("card").innerHTML = posts);
+      </div>
+      `;
+      })
+      .join("");
+
+    document.getElementById("card").innerHTML = postsHTML;
   } catch (error) {
-    console.log("Error :", error);
+    console.error("Error fetching posts:", error);
+    document.getElementById("card").innerHTML =
+      "<p class='text-red-500'>Failed to load news. Please try again later.</p>";
   }
 }
