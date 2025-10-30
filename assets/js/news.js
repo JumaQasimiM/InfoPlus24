@@ -46,10 +46,10 @@ async function load_news_detail() {
   const image = `https://picsum.photos/seed/${post.id}/800/400`;
 
   news_detail_div.innerHTML = `
-    <article class="max-w-[1300px] mx-auto bg-white rounded shadow-lg overflow-hidden my-8">
+    <article class="w-full md:max-w-[1300px] mx-auto bg-white rounded shadow-lg overflow-hidden my-8">
       <img src="${image}" alt="${
     post.title
-  }" class="w-[70%] h-[400px] mx-auto object-cover my-3">
+  }" class="w-full md:w-[70%] h-[400px] mx-auto object-content my-3">
 
       <div class="p-6">
         <h1 class="text-3xl font-bold text-gray-900 mb-3">${post.title}</h1>

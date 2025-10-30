@@ -67,7 +67,6 @@
         <li>
           <a href="index.html" class="hover:text-orange-500 transition">Home</a>
         </li>
-        <li><a href="#" class="hover:text-orange-500 transition">Sport</a></li>
         <li>
           <a href="#" class="hover:text-orange-500 transition">Technology</a>
         </li>
@@ -97,53 +96,113 @@
     </main>
 
     <!-- footer -->
-    <footer class="bg-gray-900 text-gray-300 mt-10 py-8">
-      <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8 p-4">
+    <footer class="bg-gray-900 text-gray-300 pt-10">
+      <div
+        class="w-full md:w-[1300px] mx-auto px-5 grid grid-cols-1 md:grid-cols-4 gap-8"
+      >
+        <!-- About -->
         <div>
-          <h2 class="text-2xl font-bold text-orange-500 mb-2">InfoPlus24.</h2>
+          <h3 class="text-2xl font-bold text-orange-500 mb-4">InfoPlus24.</h3>
           <p class="text-gray-400">
-            Trusted world news — stay informed, stay connected.
+            Bringing you the latest and most trusted news from around the world
+            — from politics and business to sports and technology. Stay
+            informed, stay connected.
           </p>
         </div>
+
+        <!-- Quick Links -->
         <div>
-          <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
-          <ul class="space-y-1 text-gray-400">
-            <li><a href="#" class="hover:text-orange-400">Home</a></li>
-            <li><a href="#" class="hover:text-orange-400">Technology</a></li>
-            <li><a href="#" class="hover:text-orange-400">Sports</a></li>
+          <h3 class="text-xl font-semibold text-white mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="hover:text-orange-400 transition">Home</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-orange-400 transition"
+                >Technology</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-orange-400 transition">Sports</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-orange-400 transition">Blog</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-orange-400 transition">Contact</a>
+            </li>
           </ul>
         </div>
+
+        <!-- Newsletter -->
         <div>
-          <h3 class="text-lg font-semibold mb-2">Newsletter</h3>
-          <form class="flex flex-col gap-2">
+          <h3 class="text-xl font-semibold text-white mb-4">Newsletter</h3>
+          <p class="text-gray-400 mb-3">
+            Subscribe to get the latest news updates directly in your inbox.
+          </p>
+          <div id="err" class=""></div>
+          <form
+            method="post"
+            class="flex flex-col sm:flex-row items-center gap-2"
+            id="submit_newslatter"
+          >
             <input
               type="email"
-              placeholder="Your Email"
-              class="px-3 py-2 rounded bg-gray-800 text-white focus:ring-2 focus:ring-orange-500"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              class="w-full sm:w-auto flex-grow px-3 py-2 rounded bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
+
             <button
-              class="bg-orange-600 hover:bg-orange-700 py-2 rounded text-white font-semibold"
+              type="submit"
+              class="bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded text-white font-semibold transition"
             >
               Subscribe
             </button>
           </form>
         </div>
+
+        <!-- Follow Us -->
         <div>
-          <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
+          <h3 class="text-xl font-semibold text-white mb-4">Follow Us</h3>
           <div class="flex gap-4 text-2xl">
-            <i class="fa-brands fa-facebook hover:text-blue-500"></i>
-            <i class="fa-brands fa-youtube hover:text-red-600"></i>
-            <i class="fa-brands fa-linkedin hover:text-blue-400"></i>
+            <a href="#" class="hover:text-blue-500"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="#" class="hover:text-red-600"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a href="#" class="hover:text-blue-400"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="#" class="hover:text-sky-400"
+              ><i class="fa-brands fa-telegram"></i
+            ></a>
+            <a href="#" class="hover:text-gray-100"
+              ><i class="fa-brands fa-github"></i
+            ></a>
           </div>
         </div>
       </div>
-      <div
-        class="text-center text-sm text-gray-500 mt-6 border-t border-gray-700 pt-4"
-      >
-        © <span id="year"></span> InfoPlus24 — Designed with ❤️ by Mohammad
-        Qasimi
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-gray-700 mt-10 py-5">
+        <div
+          class="w-full md:w-[1300px] mx-auto flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm px-5"
+        >
+          <p>&copy; <span id="year"></span> InfoPlus24. All Rights Reserved.</p>
+          <p>
+            Designed with ❤️ by
+            <span class="text-orange-500 font-semibold">Mohammad Qasimi</span>
+          </p>
+        </div>
       </div>
     </footer>
+    <!-- search function -->
+    <script src="assets/js/search.js"></script>
+    <!-- handle newslatter -->
+    <script src="assets/js/newslater.js"></script>
     <!-- Script -->
     <script src="assets/js/news.js"></script>
   </body>
