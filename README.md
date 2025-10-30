@@ -65,41 +65,6 @@ cd InfoPlus24
 
 You can simply drag and drop the file into your browser or use a local live
 
-🌍 Adding a Free News API
-
-You can use any of these free APIs:
-| API | Free Tier | Documentation |
-| -------------------------------------------- | ------------------ | ------------------------------ |
-| [NewsAPI.org](https://newsapi.org) | 100 requests/day | Global, business, tech, etc. |
-| [GNews.io](https://gnews.io) | 100 requests/day | General headlines & categories |
-| [Mediastack](https://mediastack.com) | 500 requests/month | Real-time and historical news |
-| [TheNewsAPI.com](https://www.thenewsapi.com) | Free plan | JSON news feeds |
-
-Example (fetchNews.js):
-async function FetchData(limit = 10) {
-const url = `https://gnews.io/api/v4/top-headlines?lang=en&country=us&max=${limit}&apikey=YOUR_API_KEY`;
-const res = await fetch(url);
-const data = await res.json();
-
-const cardContainer = document.getElementById("card");
-cardContainer.innerHTML = "";
-
-data.articles.forEach(article => {
-const card = `
-
-<div class="bg-white shadow-md rounded-md overflow-hidden">
-<img src="assets/images/news.jpg" alt="news" class="w-full h-48 object-cover">
-<div class="p-4">
-<h3 class="text-lg font-semibold mb-2">${posts.title}</h3>
-          <p class="text-gray-600 mb-3">${posts.body || ""}</p>
-
-        </div>
-      </div>`;
-
-cardContainer.innerHTML += card;
-});
-}
-
 🧑‍💻 Developer
 
 Mohammad Qasimi

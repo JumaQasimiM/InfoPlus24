@@ -19,7 +19,7 @@
   </head>
   <body class="bg-gray-" onload="FetchData(20)">
     <!-- Header -->
-    <header class="sticky top-0 z-50 bg-white shadow-md">
+    <header class="sticky top-0 z-50 bg-white shadow">
       <div
         class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center p-4"
       >
@@ -76,9 +76,9 @@
       </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- hero Section -->
     <section
-      class="max-w-6xl mx-auto mt-6 grid md:grid-cols-3 gap-10 p-4 bg-white rounded-lg shadow-sm"
+      class="max-w-6xl mx-auto mt-6 grid md:grid-cols-3 gap-10 p-4 bg-white"
     >
       <div class="md:col-span-2">
         <h1 class="text-3xl font-bold mb-3">
@@ -86,7 +86,20 @@
         </h1>
         <p class="text-gray-600 leading-relaxed mb-4">
           We are living in a time where foldable smartphones and tablets are a
-          reality...
+          reality Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+          nobis aut facilis molestias ipsa quis nisi itaque tempora. Recusandae
+          rem quaerat earum at inventore culpa aspernatur commodi iure optio
+          nisi.reality Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          We are living in a time where foldable smartphones and tablets are a
+          reality Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+          nobis aut facilis molestias ipsa quis nisi itaque tempora. Recusandae
+          rem quaerat earum at inventore culpa aspernatur commodi iure optio
+          nisi.reality Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Quia nobis aut facilis molestias ipsa quis nisi itaque tempora.
+          Recusandae rem quaerat earum at inventore culpa aspernatur commodi
+          iure optio nisi.
         </p>
         <a href="#" class="text-orange-600 underline">Learn more</a>
       </div>
@@ -104,7 +117,7 @@
           class="border-b border-gray-700 pb-3 mb-6 text-center md:text-left"
         >
           <h2
-            class="text-3xl font-bold text-orange-500 uppercase tracking-wide"
+            class="text-2xl md:text-3xl font-bold text-orange-500 uppercase tracking-wide"
           >
             Follow us on social media
           </h2>
@@ -117,7 +130,7 @@
         <div
           class="flex flex-col md:flex-row justify-center md:justify-start items-center gap-6"
         >
-          <!-- Facebook -->
+          <!-- facebook -->
           <a
             href="#"
             class="flex items-center gap-3 text-gray-200 text-xl font-semibold hover:scale-105 transition-transform duration-200"
@@ -130,7 +143,7 @@
             Facebook
           </a>
 
-          <!-- YouTube -->
+          <!-- youTube -->
           <a
             href="#"
             class="flex items-center gap-3 text-gray-200 text-xl font-semibold hover:scale-105 transition-transform duration-200"
@@ -145,7 +158,7 @@
 
           <!-- LinkedIn -->
           <a
-            href="#"
+            href="https://www.linkedin.com/in/mohammad-qasimi"
             class="flex items-center gap-3 text-gray-200 text-xl font-semibold hover:scale-105 transition-transform duration-200"
           >
             <span
@@ -171,7 +184,7 @@
 
           <!-- GitHub -->
           <a
-            href="#"
+            href="https://github.com/JumaQasimiM/InfoPlus24"
             class="flex items-center gap-3 text-gray-200 text-xl font-semibold hover:scale-105 transition-transform duration-200"
           >
             <span
@@ -185,7 +198,7 @@
       </div>
     </section>
 
-    <!--  LATEST NEWS SECTION -->
+    <!--  latest news section -->
     <section class="w-full md:w-[1300px] mx-auto my-12 px-5">
       <!-- Header -->
       <div
@@ -212,7 +225,7 @@
       ></div>
     </section>
 
-    <!--  WATCH VIDEO SECTION -->
+    <!--  watch on youtube -->
     <section class="bg-black/80 my-10">
       <div class="w-full md:w-[1300px] mx-auto py-8 px-5 text-white">
         <!-- Header -->
@@ -230,9 +243,9 @@
           </a>
         </div>
 
-        <!-- Main Content -->
+        <!-- main content -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          <!-- Featured Video -->
+          <!-- video -->
           <div class="flex flex-col">
             <div
               class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
@@ -249,7 +262,7 @@
             <h3
               class="text-xl md:text-2xl font-semibold mt-4 hover:text-orange-500 transition"
             >
-              Fresh News on Freitag 1:00 Uhr
+              Fresh News on Frieday 1:00 Uhr
             </h3>
           </div>
 
@@ -369,7 +382,7 @@
           </form>
         </div>
 
-        <!-- Follow Us -->
+        <!-- flowe us -->
         <div>
           <h3 class="text-xl font-semibold text-white mb-4">Follow Us</h3>
           <div class="flex gap-4 text-2xl">
@@ -397,7 +410,9 @@
         <div
           class="w-full md:w-[1300px] mx-auto flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm px-5"
         >
-          <p>&copy; <span id="year"></span> InfoPlus24. All Rights Reserved.</p>
+          <p>
+            &copy; <span id="year">2025</span> InfoPlus24. All Rights Reserved.
+          </p>
           <p>
             Designed with ❤️ by
             <span class="text-orange-500 font-semibold">Mohammad Qasimi</span>
@@ -406,10 +421,6 @@
       </div>
     </footer>
 
-    <!-- Update year automatically in the footer-->
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
     <!-- fetch news form api -->
     <script src="assets/js/fetchNews.js"></script>
     <!-- search function -->
