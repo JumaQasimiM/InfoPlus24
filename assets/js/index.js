@@ -71,3 +71,5 @@ videos.forEach((video) => {
     video_title_container.appendChild(p);
   }
 });
+
+// swiper hero section
