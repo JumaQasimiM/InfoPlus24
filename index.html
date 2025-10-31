@@ -82,7 +82,114 @@
       </nav>
     </header>
 
-    <!-- swiper -->
+    <!-- Slider main container -->
+    <div
+      class="swiper md:w-6xl mx-auto h-64 md:h-140 text-white mt-6 rounded-lg relative"
+    >
+      <!-- Wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slide 1: متن + تصویر -->
+        <div
+          class="swiper-slide bg-orange-700 flex items-center justify-between p-6 gap-6 rounded-lg"
+        >
+          <!-- متن -->
+          <div class="flex-1 text-white">
+            <h1 class="text-2xl md:text-4xl font-bold mb-4">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </h1>
+            <p class="mb-6 text-sm md:text-base leading-relaxed">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
+              cupiditate quam quae nam repudiandae, recusandae cum iure quisquam
+              nihil sequi deleniti suscipit quis possimus hic sed ducimus maxime
+              soluta. Iste.
+            </p>
+            <button
+              class="bg-white text-sky-500 font-semibold px-6 py-2 rounded-lg hover:bg-white/90 transition"
+            >
+              Read More
+            </button>
+          </div>
+
+          <!-- تصویر -->
+          <div class="flex-1 flex justify-end">
+            <img
+              src="assets/images/it-news.png"
+              alt="IT News"
+              class="w-full max-w-sm rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div
+          class="swiper-slide bg-green-500 flex items-center justify-between p-6 gap-6 rounded-lg"
+        >
+          <!-- متن -->
+          <div class="flex-1 text-white">
+            <h1 class="text-2xl md:text-4xl font-bold mb-4">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </h1>
+            <p class="mb-6 text-sm md:text-base leading-relaxed">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
+              cupiditate quam quae nam repudiandae, recusandae cum iure quisquam
+              nihil sequi deleniti suscipit quis possimus hic sed ducimus maxime
+              soluta. Iste.
+            </p>
+            <button
+              class="bg-white text-sky-500 font-semibold px-6 py-2 rounded-lg hover:bg-white/90 transition"
+            >
+              Read More
+            </button>
+          </div>
+
+          <!-- تصویر -->
+          <div class="flex-1 flex justify-end">
+            <img
+              src="assets/images/news.jpg"
+              alt="IT News"
+              class="w-full max-w-sm rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div
+          class="swiper-slide bg-pink-900 flex items-center justify-between p-6 gap-6 rounded-lg"
+        >
+          <!-- متن -->
+          <div class="flex-1 text-white">
+            <h1 class="text-2xl md:text-4xl font-bold mb-4">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </h1>
+            <p class="mb-6 text-sm md:text-base leading-relaxed">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
+              cupiditate quam quae nam repudiandae, recusandae cum iure quisquam
+              nihil sequi deleniti suscipit quis possimus hic sed ducimus maxime
+              soluta. Iste.
+            </p>
+            <button
+              class="bg-white text-sky-500 font-semibold px-6 py-2 rounded-lg hover:bg-white/90 transition"
+            >
+              Read More
+            </button>
+          </div>
+
+          <!-- تصویر -->
+          <div class="flex-1 flex justify-end">
+            <img
+              src="assets/images/breaking-news.png"
+              alt="IT News"
+              class="w-full h-auto max-w-sm rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div
+        class="swiper-pagination absolute bottom-4 w-full flex justify-center"
+      ></div>
+    </div>
     <!-- hero Section -->
     <section
       class="max-w-6xl mx-auto mt-6 grid md:grid-cols-3 gap-10 p-4 bg-white"
@@ -442,5 +549,24 @@
     <script type="module" src="assets/js/api.js"></script>
     <!-- fetch api -->
     <script type="module" src="assets/js/fetch-api.js"></script>
+
+    <!-- JS -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const swiper = new Swiper(".swiper", {
+          direction: "horizontal",
+          loop: true,
+          autoplay: {
+            delay: 2000,
+            disableOnInteraction: true,
+            pauseOnMouseEnter: true,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true, // برای کلیک روی دایره‌ها
+          },
+        });
+      });
+    </script>
   </body>
 </html>
