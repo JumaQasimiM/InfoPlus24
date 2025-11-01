@@ -23,8 +23,8 @@
     <link rel="stylesheet" href="assets/css/index.css" />
     <title>InfoPlus24.</title>
   </head>
-  <body class="bg-gray-" onload="FetchData(20)">
-    <!-- Header -->
+  <body class="bg-gray-" onload="FetchData(10)">
+    <!-- =========== Header ============ -->
     <header class="sticky top-0 z-50 bg-white shadow">
       <div
         class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center p-4"
@@ -60,119 +60,173 @@
         <ul
           class="flex justify-center gap-8 py-3 text-gray-700 font-semibold text-lg"
         >
-          <li>
-            <a href="index.html" class="hover:text-orange-500 transition"
-              >Home</a
+          <li class="group relative inline-block">
+            <a
+              href="index.html"
+              class="hover:text-orange-500 transition font-medium" >Home</a>
+            <span
+              class="absolute left-1/2 bottom-0 h-[3px] w-0 bg-slate-800 rounded-md group-hover:w-full group-hover:left-0 transition-all duration-300 ease-in-out"
+            >
+            </span>
+          </li>
+           <li class="group relative inline-block">
+            <a href="#" class="hover:text-orange-500 transition">Sport</a>
+              <span
+              class="absolute left-1/2 bottom-0 h-[3px] w-0 bg-slate-800 rounded-md group-hover:w-full group-hover:left-0 transition-all duration-300 ease-in-out"
             >
           </li>
-          <li>
+          <li class="group relative inline-block">
             <a href="#" class="hover:text-orange-500 transition">Technology</a>
+              <span
+              class="absolute left-1/2 bottom-0 h-[3px] w-0 bg-slate-800 rounded-md group-hover:w-full group-hover:left-0 transition-all duration-300 ease-in-out"
+            >
           </li>
 
-          <li>
+          <li class="group relative inline-block">
             <a href="#" class="hover:text-orange-500 transition">Blog</a>
+              <span
+              class="absolute left-1/2 bottom-0 h-[3px] w-0 bg-slate-800 rounded-md group-hover:w-full group-hover:left-0 transition-all duration-300 ease-in-out"
+            >
           </li>
-          <li>
-            <a href="#" class="hover:text-orange-500 transition">About</a>
+          <li class="group relative inline-block">
+            <a href="about.html" class="hover:text-orange-500 transition">About</a>
+              <span
+              class="absolute left-1/2 bottom-0 h-[3px] w-0 bg-slate-800 rounded-md group-hover:w-full group-hover:left-0 transition-all duration-300 ease-in-out"
+            >
           </li>
-          <li>
-            <a href="#" class="hover:text-orange-500 transition">Contact</a>
+          <li class="group relative inline-block">
+            <a href="contact.html" class="hover:text-orange-500 transition">Contact</a>
+              <span
+              class="absolute left-1/2 bottom-0 h-[3px] w-0 bg-slate-800 rounded-md group-hover:w-full group-hover:left-0 transition-all duration-300 ease-in-out"
+            >
           </li>
         </ul>
       </nav>
     </header>
 
-    <!-- Slider main container -->
-    <div class="swiper md:w-6xl mx-auto h-64 md:h-140 mt-2">
-      <!-- Wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slide 1 -->
-        <div
-          class="swiper-slide bg-gradient-to-r from-green-500 to-emerald-600 flex flex-col items-start justify-center p-6 sm:p-10 md:p-16 gap-6 mt-2 rounded-2xl shadow-lg text-white text-center sm:text-left"
-        >
-          <h1
-            class="text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight drop-shadow-md"
+    <!-- ============== News Slider Section ============== -->
+    <section class="relative w-full md:max-w-6xl mx-auto mt-8">
+      <div
+        class="swiper h-[28rem] md:h-[34rem] rounded-2xl overflow-hidden shadow-2xl relative"
+      >
+        <div class="swiper-wrapper">
+          <!-- Slide 1: Tech News -->
+          <div
+            class="swiper-slide flex card bg-gradient-to-r from-emerald-500 to-green-700 text-white px-6 sm:px-12 md:px-20 py-10 gap-10"
           >
-            Innovation in Technology and Green Future.
-          </h1>
+            <div class="max-w-xl space-y-6">
+              <h1
+                class="text-3xl md:text-5xl font-extrabold leading-tight drop-shadow-lg"
+              >
+                Global Tech Leaders Unite for a Greener Future
+              </h1>
+              <p class="text-white/90 text-base md:text-lg leading-relaxed">
+                Major technology firms announced a joint initiative focused on
+                sustainable innovation, pledging to reduce carbon emissions by
+                60% within the next decade.
+              </p>
+              <button
+                class="inline-flex items-center gap-3 bg-white text-emerald-600 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-emerald-50 hover:-translate-y-0.5 transition-all duration-300"
+              >
+                Read Full Story
+                <i class="fa-solid fa-arrow-right text-emerald-600"></i>
+              </button>
+            </div>
 
-          <p
-            class="text-sm sm:text-base md:text-lg leading-relaxed text-white/90 max-w-2xl mx-auto sm:mx-0"
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-            cupiditate quam quae nam repudiandae, recusandae cum iure quisquam
-            nihil sequi deleniti suscipit quis possimus hic.
-          </p>
+            <div class="hidden md:block w-1/2">
+              <img
+                src="assets/images/s1.jpg"
+                alt="Green Tech Summit"
+                class="w-full h-full object-cover rounded-2xl shadow-lg"
+              />
+            </div>
+          </div>
 
-          <button
-            class="bg-white text-green-600 font-semibold px-6 py-2 sm:px-8 sm:py-3 rounded-full shadow-md hover:scale-105 hover:bg-green-50 transition-transform duration-300 flex items-center gap-2 mx-auto sm:mx-0"
+          <!-- Slide 2: Business News -->
+          <div
+            class="swiper-slide flex card bg-gradient-to-r from-orange-400 to-red-500 text-white px-6 sm:px-12 md:px-20 py-10 gap-10"
           >
-            Read More
-            <i class="fa-solid fa-arrow-right text-green-600"></i>
-          </button>
+            <div class="max-w-xl space-y-6">
+              <h1
+                class="text-3xl md:text-5xl font-extrabold leading-tight drop-shadow-lg"
+              >
+                Markets Rally as Global Economy Shows Signs of Recovery
+              </h1>
+              <p class="text-white/90 text-base md:text-lg leading-relaxed">
+                Investors welcomed positive economic indicators as markets
+                experienced their strongest growth week of the year, signaling
+                renewed confidence across multiple sectors.
+              </p>
+              <button
+                class="inline-flex items-center gap-3 bg-white text-red-600 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-red-50 hover:-translate-y-0.5 transition-all duration-300"
+              >
+                Read Full Story
+                <i class="fa-solid fa-arrow-right text-red-600"></i>
+              </button>
+            </div>
+
+            <div class="hidden md:block w-1/2">
+              <img
+                src="assets/images/s2.jpg"
+                alt="Stock Market News"
+                class="w-full h-full object-cover rounded-2xl shadow-lg"
+              />
+            </div>
+          </div>
+
+          <!-- Slide 3: World News -->
+          <div
+            class="swiper-slide flex card bg-gradient-to-r from-pink-500 to-rose-600 text-white px-6 sm:px-12 md:px-20 py-10 gap-10"
+          >
+            <div class="max-w-xl space-y-6">
+              <h1
+                class="text-3xl md:text-5xl font-extrabold leading-tight drop-shadow-lg"
+              >
+                Global Leaders Meet to Address Climate Crisis
+              </h1>
+              <p class="text-white/90 text-base md:text-lg leading-relaxed">
+                Delegates from over 100 nations gathered this week to discuss
+                urgent climate action, outlining new frameworks for carbon
+                neutrality and green infrastructure investment.
+              </p>
+              <button
+                class="inline-flex items-center gap-3 bg-white text-pink-600 font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-pink-50 hover:-translate-y-0.5 transition-all duration-300"
+              >
+                Read Full Story
+                <i class="fa-solid fa-arrow-right text-pink-600"></i>
+              </button>
+            </div>
+
+            <div class="hidden md:block w-1/2">
+              <img
+                src="assets/images/s3.jpg"
+                alt="World Climate Summit"
+                class="w-full h-full object-cover rounded-2xl shadow-lg"
+              />
+            </div>
+          </div>
         </div>
 
-        <!-- Slide 2 -->
+        <!-- Pagination -->
         <div
-          class="swiper-slide bg-gradient-to-r from-orange-400 to-red-500 flex flex-col items-start justify-center p-6 sm:p-10 md:p-16 gap-6 rounded-2xl shadow-lg text-white text-center sm:text-left"
+          class="swiper-pagination absolute bottom-6 w-full flex justify-center"
+        ></div>
+
+        <!-- Navigation Buttons -->
+        <div
+          class="swiper-button-prev absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-10 bg-white/30 hover:bg-white/60 text-white hover:text-gray-800 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg backdrop-blur-sm transition-all duration-300"
         >
-          <h1
-            class="text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight drop-shadow-md"
-          >
-            Empowering Innovation for a Brighter Tomorrow.
-          </h1>
-
-          <p
-            class="text-sm sm:text-base md:text-lg leading-relaxed text-white/90 max-w-2xl mx-auto sm:mx-0"
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-            cupiditate quam quae nam repudiandae, recusandae cum iure quisquam
-            nihil sequi deleniti suscipit quis possimus hic sed ducimus maxime
-            soluta.
-          </p>
-
-          <button
-            class="bg-white text-red-600 font-semibold px-6 py-2 sm:px-8 sm:py-3 rounded-full shadow-md hover:scale-105 hover:bg-red-50 transition-transform duration-300 flex items-center gap-2 mx-auto sm:mx-0"
-          >
-            Read More
-            <i class="fa-solid fa-arrow-right text-red-600"></i>
-          </button>
+          <i class="fa-solid fa-chevron-left text-lg"></i>
         </div>
-
-        <!-- Slide 3 -->
         <div
-          class="swiper-slide bg-gradient-to-r from-pink-500 to-rose-600 flex flex-col items-start justify-center p-6 sm:p-10 md:p-16 gap-6 rounded-2xl shadow-lg text-white text-center sm:text-left"
+          class="swiper-button-next absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-10 bg-white/30 hover:bg-white/60 text-white hover:text-gray-800 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg backdrop-blur-sm transition-all duration-300"
         >
-          <h1
-            class="text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight drop-shadow-md"
-          >
-            Inspiring Ideas and Creative Solutions.
-          </h1>
-
-          <p
-            class="text-sm sm:text-base md:text-lg leading-relaxed text-white/90 max-w-2xl mx-auto sm:mx-0"
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-            cupiditate quam quae nam repudiandae, recusandae cum iure quisquam
-            nihil sequi deleniti suscipit quis possimus hic sed ducimus maxime
-            soluta.
-          </p>
-
-          <button
-            class="bg-white text-pink-600 font-semibold px-6 py-2 sm:px-8 sm:py-3 rounded-full shadow-md hover:scale-105 hover:bg-pink-50 transition-transform duration-300 flex items-center gap-2 mx-auto sm:mx-0"
-          >
-            Read More
-            <i class="fa-solid fa-arrow-right text-pink-600"></i>
-          </button>
+          <i class="fa-solid fa-chevron-right text-lg"></i>
         </div>
       </div>
+    </section>
 
-      <!-- Pagination -->
-      <div
-        class="swiper-pagination absolute bottom-4 w-full flex justify-center"
-      ></div>
-    </div>
-    <!-- hero Section -->
+    <!-- ============== hero Section ===========0 -->
     <section
       class="max-w-6xl mx-auto mt-6 grid md:grid-cols-3 gap-10 p-4 bg-white"
     >
@@ -199,7 +253,7 @@
         alt="Tech News"
       />
     </section>
-    <!-- FOLLOW US SECTION -->
+    <!--   ============= follow us section=============== -->
     <section class="bg-gray-900 py-12">
       <div class="max-w-6xl mx-auto px-5">
         <!-- Title -->
@@ -288,7 +342,7 @@
       </div>
     </section>
 
-    <!--  latest news section -->
+    <!-- ================= latest news section ===================== -->
     <section class="w-full md:w-[1300px] mx-auto my-12 px-5">
       <!-- Header -->
       <div
@@ -308,14 +362,14 @@
         </a>
       </div>
 
-      <!-- News Cards -->
+      <!-- =============== News Cards ================= -->
       <div
         id="card"
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10"
       ></div>
     </section>
 
-    <!--  watch on youtube -->
+    <!--  ================== watch on youtube ================== -->
     <section class="bg-black/80 my-10">
       <div class="w-full md:w-[1300px] mx-auto py-8 px-5 text-white">
         <!-- Header -->
@@ -404,7 +458,7 @@
       </div>
     </section>
 
-    <!-- footer -->
+    <!-- ================== footer ====================== -->
     <footer class="bg-gray-900 text-gray-300 pt-10">
       <div
         class="w-full md:w-[1300px] mx-auto px-5 grid grid-cols-1 md:grid-cols-4 gap-8"
@@ -525,24 +579,7 @@
     <script type="module" src="assets/js/api.js"></script>
     <!-- fetch api -->
     <script type="module" src="assets/js/fetch-api.js"></script>
-
-    <!-- JS -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const swiper = new Swiper(".swiper", {
-          direction: "horizontal",
-          loop: true,
-          autoplay: {
-            delay: 2000,
-            disableOnInteraction: true,
-            pauseOnMouseEnter: true,
-          },
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true, // برای کلیک روی دایره‌ها
-          },
-        });
-      });
-    </script>
+    <!-- swiper  -->
+    <script src="assets/js/swiper.js"></script>
   </body>
 </html>

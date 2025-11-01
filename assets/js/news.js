@@ -49,7 +49,7 @@ async function load_news_detail() {
     <article class="w-full md:max-w-[1300px] mx-auto bg-white rounded shadow-lg overflow-hidden my-8">
       <img src="${image}" alt="${
     post.title
-  }" class="w-full md:w-[70%] h-[400px] mx-auto object-content my-3">
+  }" class="w-full md:w-full h-[400px] mx-auto object-content mb-4">
 
       <div class="p-6">
         <h1 class="text-3xl font-bold text-gray-900 mb-3">${post.title}</h1>
