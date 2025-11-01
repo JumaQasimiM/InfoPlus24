@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InfoPlus24</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body class="bg-gray-50 text-gray-800 font-sans min-h-screen flex flex-col">
+    <!-- =========== Header ============ -->
+    <header class="sticky top-0 z-50 bg-white shadow">
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center p-4"
+      >
+        <a href="index.html" class="text-3xl font-bold text-orange-500"
+          >InfoPlus24<span class="text-gray-900">.</span></a
+        >
+
+        <!-- Search -->
+        <form
+          id="search_form"
+          class="flex items-center bg-gray-100 rounded-full px-4 py-2 mt-3 md:mt-0 focus-within:ring-2 focus-within:ring-orange-500"
+        >
+          <i class="fa-solid fa-magnifying-glass text-gray-500"></i>
+          <input
+            type="text"
+            placeholder="Search news..."
+            class="bg-transparent outline-none px-2 text-gray-700 w-56 md:w-80"
+          />
+        </form>
+
+        <!-- Icons -->
+        <div class="flex gap-4 text-2xl text-gray-600 mt-3 md:mt-0">
+          <i
+            class="fa-regular fa-user hover:text-orange-500 cursor-pointer"
+          ></i>
+          <i class="fa-solid fa-globe hover:text-orange-500 cursor-pointer"></i>
+        </div>
+      </div>
+
+      <!-- Menu -->
+      <nav class="border-t">
+        <ul
+          class="flex justify-center gap-8 py-3 text-gray-700 font-semibold text-lg"
+        >
+          <li class="group relative inline-block">
+            <a
+              href="index.html"
+              class="hover:text-orange-500 transition font-medium"
+              >Home</a
+            >
+            <span
+              class="absolute left-1/2 bottom-0 h-[3px] w-0 bg-slate-800 rounded-md group-hover:w-full group-hover:left-0 transition-all duration-300 ease-in-out"
+            >
+            </span>
+          </li>
+          <li class="group relative inline-block">
+            <a href="#" class="hover:text-orange-500 transition">Sport</a>
+            <span
+              class="absolute left-1/2 bottom-0 h-[3px] w-0 bg-slate-800 rounded-md group-hover:w-full group-hover:left-0 transition-all duration-300 ease-in-out"
+            >
+            </span>
+          </li>
+          <li class="group relative inline-block">
+            <a href="#" class="hover:text-orange-500 transition">Technology</a>
+            <span
+              class="absolute left-1/2 bottom-0 h-[3px] w-0 bg-slate-800 rounded-md group-hover:w-full group-hover:left-0 transition-all duration-300 ease-in-out"
+            >
+            </span>
+          </li>
+
+          <li class="group relative inline-block">
+            <a href="#" class="hover:text-orange-500 transition">Blog</a>
+            <span
+              class="absolute left-1/2 bottom-0 h-[3px] w-0 bg-slate-800 rounded-md group-hover:w-full group-hover:left-0 transition-all duration-300 ease-in-out"
+            >
+            </span>
+          </li>
+          <li class="group relative inline-block">
+            <a href="about.html" class="hover:text-orange-500 transition"
+              >About</a
+            >
+            <span
+              class="absolute left-1/2 bottom-0 h-[3px] w-0 bg-slate-800 rounded-md group-hover:w-full group-hover:left-0 transition-all duration-300 ease-in-out"
+            >
+            </span>
+          </li>
+          <li class="group relative inline-block">
+            <a href="contact.html" class="hover:text-orange-500 transition"
+              >Contact</a
+            >
+            <span
+              class="absolute left-1/2 bottom-0 h-[3px] w-0 bg-slate-800 rounded-md group-hover:w-full group-hover:left-0 transition-all duration-300 ease-in-out"
+            >
+            </span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ========= about section =============== -->
+
+    <section class="relative w-full mx-auto mt-16 md:mt-10">
+      <!-- Hero Section -->
+      <div
+        class="relative bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white py-20 px-6 sm:px-12 md:px-20 text-center md:text-left"
+      >
+        <div class="max-w-4xl mx-auto space-y-6">
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+            About <span class="text-orange-500">InfoPlus24.</span>
+          </h1>
+          <p class="text-lg md:text-xl text-white/80 leading-relaxed">
+            Delivering trusted, timely, and insightful journalism from around
+            the world — empowering readers with facts, context, and clarity.
+          </p>
+        </div>
+        <img
+          src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&w=1600&q=80"
+          alt="Newsroom Background"
+          class="absolute inset-0 w-full h-full object-cover opacity-20 -z-10"
+        />
+      </div>
+
+      <!-- Mission Section -->
+      <div
+        class="max-w-5xl mx-auto mt-20 px-6 sm:px-12 md:px-20 text-center md:text-left"
+      >
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+          Our Mission
+        </h2>
+        <p class="text-slate-600 text-lg leading-relaxed max-w-3xl">
+          At <span class="font-semibold text-slate-800">InfoPlus24.</span> our
+          mission is to inform, inspire, and connect people through honest
+          reporting and powerful storytelling. <br /><br />
+          We believe in journalism that upholds transparency, accuracy, and
+          independence. Our goal is to make the world more understandable — one
+          headline at a time.
+        </p>
+      </div>
+
+      <!-- Core Values -->
+      <div
+        class="max-w-6xl mx-auto mt-20 px-6 sm:px-12 grid md:grid-cols-3 gap-10"
+      >
+        <div
+          class="p-8 bg-white shadow-lg rounded-2xl hover:-translate-y-1 transition-transform duration-300"
+        >
+          <div class="text-orange-500 text-4xl mb-4">
+            <i class="fa-solid fa-bullhorn"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-800 mb-3">Integrity</h3>
+          <p class="text-slate-600 leading-relaxed">
+            Every story is reported with honesty and verified facts — because
+            credibility is our cornerstone.
+          </p>
+        </div>
+
+        <div
+          class="p-8 bg-white shadow-lg rounded-2xl hover:-translate-y-1 transition-transform duration-300"
+        >
+          <div class="text-orange-500 text-4xl mb-4">
+            <i class="fa-solid fa-earth-americas"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-800 mb-3">
+            Global Perspective
+          </h3>
+          <p class="text-slate-600 leading-relaxed">
+            Our journalists bring balanced, global coverage to help readers
+            understand how events connect across borders.
+          </p>
+        </div>
+
+        <div
+          class="p-8 bg-white shadow-lg rounded-2xl hover:-translate-y-1 transition-transform duration-300"
+        >
+          <div class="text-orange-500 text-4xl mb-4">
+            <i class="fa-solid fa-pen-nib"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-800 mb-3">Innovation</h3>
+          <p class="text-slate-600 leading-relaxed">
+            We blend traditional journalism with cutting-edge technology to
+            deliver interactive and visual storytelling.
+          </p>
+        </div>
+      </div>
+
+      <!-- Editorial Team Section -->
+      <div class="max-w-6xl mx-auto mt-24 px-6 sm:px-12">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-10"
+        >
+          Meet Our Editorial Team
+        </h2>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
+          <!-- Team Member -->
+          <div
+            class="bg-white p-6 rounded-2xl shadow-lg text-center hover:-translate-y-1 transition-transform duration-300"
+          >
+            <img
+              src="assets/images/myfoto.jpg"
+              alt="Editor in Chief"
+              class="w-24 h-24 rounded-full mx-auto mb-4 object-cover shadow-md"
+            />
+            <h3 class="text-lg font-semibold text-slate-800">Mohmmad</h3>
+            <p class="text-orange-500 font-medium">Editor-in-Chief</p>
+            <p class="text-slate-600 text-sm mt-2">
+              Over 15 years of experience in investigative and international
+              journalism.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-2xl shadow-lg text-center hover:-translate-y-1 transition-transform duration-300"
+          >
+            <img
+              src="assets/images/myfoto.jpg"
+              alt="Senior Correspondent"
+              class="w-24 h-24 rounded-full mx-auto mb-4 object-cover shadow-md"
+            />
+            <h3 class="text-lg font-semibold text-slate-800">Qasimi</h3>
+            <p class="text-orange-500 font-medium">Senior Correspondent</p>
+            <p class="text-slate-600 text-sm mt-2">
+              Specializing in political and economic analysis across global
+              markets.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-2xl shadow-lg text-center hover:-translate-y-1 transition-transform duration-300"
+          >
+            <img
+              src="assets/images/myfoto.jpg"
+              class="w-24 h-24 rounded-full mx-auto mb-4 object-cover shadow-md"
+            />
+            <h3 class="text-lg font-semibold text-slate-800">
+              Moh Juma qasimi
+            </h3>
+            <p class="text-orange-500 font-medium">Lead Photojournalist</p>
+            <p class="text-slate-600 text-sm mt-2">
+              Capturing the human side of global events through powerful
+              imagery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- newslatter section -->
+    <section class="my-10"></section>
+
+    <!-- footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-10">
+      <div
+        class="w-full md:w-[1300px] mx-auto px-5 grid grid-cols-1 md:grid-cols-4 gap-8"
+      >
+        <!-- About -->
+        <div>
+          <h3 class="text-2xl font-bold text-orange-500 mb-4">InfoPlus24.</h3>
+          <p class="text-gray-400">
+            Bringing you the latest and most trusted news from around the world
+            — from politics and business to sports and technology. Stay
+            informed, stay connected.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="hover:text-orange-400 transition">Home</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-orange-400 transition"
+                >Technology</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-orange-400 transition">Sports</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-orange-400 transition">Blog</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-orange-400 transition">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">Newsletter</h3>
+          <p class="text-gray-400 mb-3">
+            Subscribe to get the latest news updates directly in your inbox.
+          </p>
+          <div id="err" class=""></div>
+          <form
+            method="post"
+            class="flex flex-col sm:flex-row items-center gap-2"
+            id="submit_newslatter"
+          >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              class="w-full sm:w-auto flex-grow px-3 py-2 rounded bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            />
+
+            <button
+              type="submit"
+              class="bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded text-white font-semibold transition"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+
+        <!-- Follow Us -->
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">Follow Us</h3>
+          <div class="flex gap-4 text-2xl">
+            <a href="#" class="hover:text-blue-500"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="#" class="hover:text-red-600"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a href="#" class="hover:text-blue-400"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="#" class="hover:text-sky-400"
+              ><i class="fa-brands fa-telegram"></i
+            ></a>
+            <a href="#" class="hover:text-gray-100"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-gray-700 mt-10 py-5">
+        <div
+          class="w-full md:w-[1300px] mx-auto flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm px-5"
+        >
+          <p>&copy; <span id="year"></span> InfoPlus24. All Rights Reserved.</p>
+          <p>
+            Designed with ❤️ by
+            <span class="text-orange-500 font-semibold">Mohammad Qasimi</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- search function -->
+    <script src="assets/js/search.js"></script>
+    <!-- handle newslatter -->
+    <script src="assets/js/newslater.js"></script>
+  </body>
+</html>
