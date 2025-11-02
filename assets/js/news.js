@@ -1,10 +1,4 @@
-// create title for page
-function page_title() {
-  const params = new URLSearchParams(window.location.search);
-  const title = params.get("slug");
-  return title ? decodeURIComponent(title.replace(/-/g, " ")) : "Home";
-}
-
+import { page_title, getPost, getUser } from "./api.js";
 // Set the page title dynamically
 document.title = `InfoPlus24 | ${page_title()}`;
 
@@ -24,9 +18,8 @@ async function load_news_detail() {
   console.log("Searching for:", title);
 
   // fetch post data form api
-  const response = await fetch(`https://dummyjson.com/posts/search?q=${title}`);
-  const data = await response.json();
 
+  const data = await getPost(`https://dummyjson.com/posts/search?q=${title}`);
   // check if found data
   if (!data.posts || data.posts.length === 0) {
     news_detail_div.innerHTML = `<p class="text-center text-gray-500 text-xl py-10">No matching post found 😕</p>`;
@@ -37,10 +30,7 @@ async function load_news_detail() {
   // console.log(post);
 
   // fetch author data
-  const author_response = await fetch(
-    `https://dummyjson.com/users/${post.userId}`
-  );
-  const author = await author_response.json();
+  const author = await getUser(`https://dummyjson.com/users/${post.userId}`);
 
   // create image for posts
   const image = `https://picsum.photos/seed/${post.id}/800/400`;

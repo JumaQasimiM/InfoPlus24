@@ -1,3 +1,4 @@
+import { FetchPosts } from "./api.js";
 // Show logged-in user not compleete
 function showUser() {
   const user = localStorage.getItem("user");
@@ -16,13 +17,11 @@ async function FetchData(postCount) {
   const m = now.getMinutes().toString().padStart(2, "0");
 
   try {
-    const response = await fetch(url);
-
-    if (!response.ok) {
-      throw new Error("Response Status: " + response.status);
+    const result = await FetchPosts(url);
+    // have reasult  correct format or not
+    if (!result || !Array.isArray(result.posts)) {
+      throw new Error("Invalid API response");
     }
-
-    const result = await response.json();
 
     // Build HTML for posts
     let postsHTML = result.posts
@@ -77,3 +76,5 @@ async function FetchData(postCount) {
       "<p class='text-red-500'>Failed to load news. Please try again later.</p>";
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => FetchData(10));
