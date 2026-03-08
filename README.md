@@ -36,15 +36,24 @@ It features the latest news, live updates, embedded videos, and social media int
 
 InfoPlus24/
 │
+
 ├── index.html # Main HTML file
 │
+
 ├── assets/
+
 │ ├── css/
+
 │ │ └── index.css # Custom CSS
+
 │ ├── images/
+
 │ │ └── news.jpg # Sample news image
+
 │ └── js/
+
 │ ├── index.js # Front-end scripts
+
 │ └── fetchNews.js # Fetch data from API
 │
 └── README.md # Project documentation
