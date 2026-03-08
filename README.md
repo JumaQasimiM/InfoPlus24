@@ -61,6 +61,7 @@ git clone https://github.com/JumaQasimiM/InfoPlus24.git
 
 2️⃣ Open the project folder
 cd InfoPlus24
+
 3️⃣ Open index.html in your browser
 
 You can simply drag and drop the file into your browser or use a local live
@@ -68,8 +69,11 @@ You can simply drag and drop the file into your browser or use a local live
 🧑‍💻 Developer
 
 Mohammad Qasimi
+
 💼 Front-End Developer | 🌍 Based on HTML, Tailwind, and JS
+
 📧 Contact: juma82db@gmail.com
+
 
 📜 License
 
