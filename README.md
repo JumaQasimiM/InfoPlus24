@@ -28,7 +28,7 @@ It features the latest news, live updates, embedded videos, and social media int
 | **Tailwind CSS (CDN)**   | For modern and responsive styling          |
 | **Font Awesome 7**       | For icons and social media logos           |
 | **JavaScript (Vanilla)** | For fetching live data and interactivity   |
-| **News API**             | (Optional) For fetching real-time articles |
+| **News API**             |  For fetching real-time articles |
 
 ---
 
@@ -36,7 +36,7 @@ It features the latest news, live updates, embedded videos, and social media int
 
     InfoPlus24/
     │
-    ├── index.html # Main HTML file
+    ├── index.html 
     │
     ├── assets/
     │ ├── css/
@@ -47,7 +47,7 @@ It features the latest news, live updates, embedded videos, and social media int
     │ ├── index.js # Front-end scripts
     │ └── fetchNews.js # Fetch data from API
     │
-    └── README.md # Project documentation
+    └── README.md
 
 ---
 
