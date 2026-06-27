@@ -66,15 +66,14 @@ cd InfoPlus24
 
 You can simply drag and drop the file into your browser or use a local live
 
-🧑‍💻 Developer
 
-Mohammad Qasimi
+## Author
 
-💼 Front-End Developer | 🌍 Based on HTML, Tailwind, and JS
+**Mohammad Juma Qasimi**  
+**_Frontend Developer | React.js_**
 
-📧 Contact: juma82db@gmail.com
+> Building modern, scalable, and user-friendly web interfaces.
 
-
- ## License
-
-This project is open-source and available under the MIT License.
+- Clean UI / UX
+- Scalable frontend architecture
+- Continuous learning mindset
